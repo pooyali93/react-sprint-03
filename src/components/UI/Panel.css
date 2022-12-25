@@ -1,0 +1,63 @@
+.panel {
+  padding: 0 10px;
+}
+
+.item {
+  background: #FFF;
+  margin-bottom: 5px;
+  padding: 10px 20px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border: 1px solid #d0d7de;
+}
+
+.title {
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.card {
+  padding: 2rem;
+  border: 1px solid #cdcdcd;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-transform: none;
+}
+
+.title h2 {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.content {
+  color: black;
+  height: 100%;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+  background: #fff;
+  padding: 0;
+  margin: -6px 0 10px 0px;
+}
+
+.content.show {
+  height: auto;
+  background: red;
+  max-height: 9999px;
+  transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+}
+
+@media screen and (min-width: 1024px) {
+  .title h2 {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1224px) {
+  .title h2 {
+    font-size: 18px;
+  }
+}/*# sourceMappingURL=Panel.css.map */

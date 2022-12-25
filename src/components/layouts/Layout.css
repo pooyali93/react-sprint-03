@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  padding-left: 30px;
+}
+
+p {
+  padding-left: 30px;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Arial, sans-serif;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+.custom-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: #333;
+}
+
+#root {
+  width: 100%;
+  background: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 98%;
+  height: 100vh;
+  padding: 1rem;
+  display: flex;
+}
+
+.grid {
+  width: 100%;
+  height: 100%;
+  padding: 2rem 0;
+  background: #fff;
+  overflow-y: scroll;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: -webkit-max-content;
+  grid-template-rows: max-content;
+  grid-template-areas: "header" "aside" "main";
+  gap: 1rem;
+}
+
+.main {
+  grid-area: main;
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #cdcdcd;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+div#root div.container > main.main-layout section > .container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .grid-responsive {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "aside header header" "aside main main" "aside main main";
+  }
+}
+@media (min-width: 1024px) {
+  .grid-responsive {
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "aside header header" "aside main main" "aside main main";
+  }
+}/*# sourceMappingURL=Layout.css.map */
